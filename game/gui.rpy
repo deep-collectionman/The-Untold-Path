@@ -54,14 +54,20 @@ define gui.interface_text_color = u'#ffffff'
 
 ## Fonts and Font Sizes ########################################################
 
+######################
+## Custom Constants ##
+######################
+
+define walkway_font_path = "./fonts/Walkway/Walkway_Black.ttf"
+
 ## The font used for in-game text.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = walkway_font_path
 
 ## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = walkway_font_path
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = walkway_font_path
 
 ## The size of normal dialogue text.
 define gui.text_size = 22
@@ -104,12 +110,12 @@ define gui.textbox_yalign = 1.0
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = 240
+define gui.name_xpos = 0.5
 define gui.name_ypos = 0
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
-define gui.name_xalign = 0.0
+define gui.name_xalign = 0.5
 
 ## The width, height, and borders of the box containing the character's name, or
 ## None to automatically size it.
@@ -128,7 +134,7 @@ define gui.namebox_tile = False
 ## The placement of dialogue relative to the textbox. These can be a whole
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
-define gui.dialogue_xpos = 268
+define gui.dialogue_xpos = 0.5
 define gui.dialogue_ypos = 50
 
 ## The maximum width of dialogue text, in pixels.
@@ -136,7 +142,7 @@ define gui.dialogue_width = 744
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
-define gui.dialogue_text_xalign = 0.0
+define gui.dialogue_text_xalign = 0.5
 
 
 ## Buttons #####################################################################
@@ -209,8 +215,8 @@ define gui.choice_button_borders = Borders(100, 5, 100, 5)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = "#cccccc"
-define gui.choice_button_text_hover_color = "#ffffff"
+define gui.choice_button_text_idle_color = "#e88670"
+define gui.choice_button_text_hover_color = "#d16149"
 define gui.choice_button_text_insensitive_color = "#444444"
 
 
@@ -343,8 +349,8 @@ define gui.history_height = 140
 
 ## The position, width, and alignment of the label giving the name of the
 ## speaking character.
-define gui.history_name_xpos = 155
-define gui.history_name_ypos = 0
+define gui.history_name_xpos = 160
+define gui.history_name_ypos = -30
 define gui.history_name_width = 155
 define gui.history_name_xalign = 1.0
 
