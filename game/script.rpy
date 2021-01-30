@@ -3,7 +3,10 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define VOICE_IN_OFF = Character("...", color="ffffff")
+define VOICE_IN_OFF = Character("...", color="#ffffff")
+
+
+define effect_flashbulb = Fade(0.2, 0.0, 0.8, color="#fff")
 
 
 # The game starts here.
@@ -14,51 +17,25 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    scene black 
+    with fade
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    "Welcome to The Untold Path"
 
-    #bshow eileen happy
+    "Maybe you are asking to yourself what all is this about... or maybe not but anyways let me tell you."
 
-    # These display lines of dialogue.
+    "The explanation will be briefly. This game is about the decisions that you make BY YOUR OWN CHOICE regarding the different events that have place in this story"
 
-    # e "You've created a new Ren'Py game."
+    "Enjoy the game"
 
-    # e "Once you add a story, pictures, and music, you can release it to the world!"
+    scene bg beautiful park game
+    with dissolve
 
-    # This ends the game.
+    "The completly silence can be feel in the atmosphere..."
 
-    $ voice_dialogues = [
-        "Hello there",
-        "How are you, how do you feel?"
-        "Is all ok?"
-        "Excellent"
-    ]
+    scene bg beautiful park game
+    with effect_flashbulb
 
-    python:
-        for dialogue in voice_dialogues[0:3]:
-            say(VOICE_IN_OFF, dialogue)
-
-    menu:
-        "This is a menu option. First One":
-            "Ok 1"
-
-        "This is a menu option. Second One":
-            "Ok 2"
-
-    VOICE_IN_OFF "Let's go ahead and see what happen"
-    call select("17")
-
-    VOICE_IN_OFF "That is awesome. We come back to the main function"
-    call came(2)
-
-    VOICE_IN_OFF "What about you? Did you forget something?"
-
-    return
-
-label select(name="default"):
-    "Well [name]"
+    VOICE_IN_OFF "Hey, are you listen?" 
 
     return

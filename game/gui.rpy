@@ -23,7 +23,7 @@ init python:
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = u'#00cc99'
+define gui.accent_color = u'#8a7d67'
 
 ## The color used for a text button when it is neither selected nor hovered.
 define gui.idle_color = u'#888888'
@@ -49,7 +49,7 @@ define gui.hover_muted_color = u'#007a5b'
 
 ## The colors used for dialogue and menu choice text.
 define gui.text_color = u'#ffffff'
-define gui.interface_text_color = u'#ffffff'
+define gui.interface_text_color = u'#b0e7cd'
 
 
 ## Fonts and Font Sizes ########################################################
@@ -58,16 +58,16 @@ define gui.interface_text_color = u'#ffffff'
 ## Custom Constants ##
 ######################
 
-define walkway_font_path = "./fonts/Walkway/Walkway_Black.ttf"
+define FONT_PATH = "./fonts/architect-s-daughter/ArchitectsDaughter.ttf"
 
 ## The font used for in-game text.
-define gui.text_font = walkway_font_path
+define gui.text_font = FONT_PATH
 
 ## The font used for character names.
-define gui.name_text_font = walkway_font_path
+define gui.name_text_font = FONT_PATH
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = walkway_font_path
+define gui.interface_text_font = FONT_PATH
 
 ## The size of normal dialogue text.
 define gui.text_size = 22
@@ -90,8 +90,10 @@ define gui.title_text_size = 50
 
 ## Main and Game Menus #########################################################
 
+define MAIN_MENU_IMAGE = "images/bg beautiful park.jpeg"
+
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/main_menu.png"
+define gui.main_menu_background = MAIN_MENU_IMAGE
 define gui.game_menu_background = "gui/game_menu.png"
 
 
@@ -216,7 +218,7 @@ define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
 define gui.choice_button_text_idle_color = "#e88670"
-define gui.choice_button_text_hover_color = "#d16149"
+define gui.choice_button_text_hover_color = "#fefefe"
 define gui.choice_button_text_insensitive_color = "#444444"
 
 

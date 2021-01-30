@@ -3,17 +3,25 @@
 label splashscreen:
     scene black
 
-    show text "Global Game Jam 2021 or I should said 2020 and a quater"
+    show text "Global Game Jam 2021..."
     with dissolve
-    with Pause(3)
+    with Pause(1)
 
     hide text 
     with dissolve 
-    with Pause(2)
+    with Pause(1.5)
+
+    show text "or I should said 2020 and a quater"
+    with dissolve
+    with Pause(1)
+
+    hide text 
+    with dissolve 
+    with Pause(1.5)
 
     show text "By collectionman#9288 ..."
     with dissolve 
-    with Pause(2)
+    with Pause(1)
 
     hide text 
     with dissolve 

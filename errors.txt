@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 60: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-        "Well [name]
+File "game/script.rpy", line 20: expected 'image_name_component' not found.
+    show scene black 
+        ^
 
 Ren'Py Version: Ren'Py 7.4.1.1270
-Sat Jan 30 14:00:49 2021
+Sat Jan 30 18:40:30 2021
