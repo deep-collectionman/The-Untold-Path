@@ -83,7 +83,7 @@ label start:
     pause
 
     stop music fadeout 2
-    call play_alarm from _call_play_alarm
+    call play_alarm
 
     scene bg room day
     with dissolve
@@ -97,9 +97,9 @@ label start:
 
     menu:
         "Go to the park":
-            call park_scene from _call_park_scene
+            call park_scene
         "Stay at home":
-            call stay_at_home from _call_stay_at_home
+            call stay_at_home
 
     scene black 
     with fade
