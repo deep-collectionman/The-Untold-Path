@@ -2,41 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 47: end of line expected.
-    with pause 1
-               ^
-
-File "game/script.rpy", line 51: end of line expected.
-    with pause 1
-               ^
-
-File "game/script.rpy", line 55: end of line expected.
-    with pause 1
-               ^
-
-File "game/script.rpy", line 59: end of line expected.
-    with pause 1
-               ^
-
-File "game/script.rpy", line 63: end of line expected.
-    with pause 1
-               ^
-
-File "game/script.rpy", line 67: end of line expected.
-    with pause 1
-               ^
-
-File "game/script.rpy", line 71: end of line expected.
-    with pause 1
-               ^
-
-File "game/script.rpy", line 75: end of line expected.
-    with pause 1
-               ^
-
-File "game/script.rpy", line 101: end of line expected.
-    with pause 1
-               ^
+File "game/park_scene.rpy", line 229: expected 'label_name_declare' not found.
+    label
+         ^
 
 Ren'Py Version: Ren'Py 7.4.1.1270
-Sun Jan 31 12:47:19 2021
+Sun Jan 31 17:09:18 2021

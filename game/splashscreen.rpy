@@ -16,7 +16,7 @@ label splashscreen:
     with dissolve 
     with Pause(1.5)
 
-    show text "or I should said 2020 and a quater"
+    show text "or I should said 2020 and a quarter"
     with dissolve
     with Pause(1)
 

@@ -25,13 +25,11 @@ label park_scene:
     UNKNOW_PERSON "Hey" 
     UNKNOW_PERSON "Hey! are you listen?"
 
-    play sound "./audio/wind.ogg"
-
     menu:
         "No":
-            UNKNOW_PERSON "Argh... You dumbass!"
+            UNKNOW_PERSON "Urgh... You dumbass!"
             $ RELEVANCE_VARIABLE = RELEVANCE_VARIABLE - 0.5
-        "Umm Yeah. What happen?":
+        "Uhm Yeah. What happen?":
             UNKNOW_PERSON "Can you came here?"
 
     UNKNOW_PERSON "Look... I lost my dog here in the park."
@@ -42,6 +40,10 @@ label park_scene:
     menu:
         "I have better things to do":
             UNKNOW_PERSON "Oh well. Thank you for you KINDNESS"
+
+            hide standby anger rsz
+            with dissolve
+
             $ KINDNESS_ALLOWED = False
             $ RELEVANCE_VARIABLE = RELEVANCE_VARIABLE - 0.20
             call better_things_to_do from _call_better_things_to_do
@@ -73,13 +75,25 @@ label better_things_to_do:
 
     menu:
         "Start walking around the park":
-            "..."
+            show text "Feeling upset you start walking to the beach"
+            with dissolve
+            with Pause(1)
             #  call stay at the park
+            call incompletely_warning from _call_incompletely_warning
         "Come back to start searching for the dog":
+            INNER_VOICE "Uh - Thinking it better I should come back to see I can find him"   
+
             call search_for_dog from _call_search_for_dog_2
         "Go to the beach":
             # call beach_scene_alone:
-            "..."
+            scene black
+            with dissolve
+
+            show text "Feeling upset you start walking with direction to the beach"
+            with dissolve
+            with Pause(1)
+
+            call incompletely_warning from _call_incompletely_warning_1
 
 
     return
@@ -91,20 +105,20 @@ label search_for_dog:
     "Where you want to start looking for?"
 
     menu:
-        "Go to left":
+        "Keep walking throught the footpath":
             INNER_VOICE "Mmmm... It seems that he is not here."
             
-            "Suddenly you hear the voice of the girl who you were talking before."
+            "Suddenly you hear the voice of the girl who you were talking a moment ago."
 
             UNKNOW_PERSON "It's here!!"
 
-            "You decide to follow her voice."
+            "You decided to follow her voice."
         "Search between the trees":
             play sound "./audio/ambience.ogg"
             "Well - It seems that I'm close to him..." 
             "Hey buddy! Where are you?"
 
-            "You can see a furry thing playing with butterflies there."
+            "You can see a furry thing trying to catch some butterflies there."
 
             UNKNOW_PERSON "You found him!"
 
@@ -116,16 +130,21 @@ label search_for_dog:
     UNKNOW_PERSON "Pepper! You're going to scare me to death if you keep running out of my sight"
     UNKNOW_PERSON "But I'm so glad that we could find you."
 
-    show standby happy rsz at center
+    show standby sarrow rsz at center
     with dissolve
 
     UNKNOW_PERSON "Don't make this again to me Pepper - please."
     "..."
+
+    show standby happy rsz at center
+    with dissolve
+
     UNKNOW_PERSON "And thank you for helping me with this. I don't know what I will do if I lost him."
 
     play sound "./audio/Well Done CCBY3.ogg" fadein 1
 
-    "There is a voice in your head."
+    "There is a voice in your head. While she stands smiling at you."
+    "..."
 
     VOICE_IN_OFF "It seems that you like it. Do you want to continue chatting with her?"
     INNER_VOICE "..."
@@ -133,14 +152,14 @@ label search_for_dog:
     menu:
         "Remain in silence":
             INNER_VOICE "..."
-            INNER_VOICE "Uh, What? What where came that voice?"
+            INNER_VOICE "Uh - What? From where came that voice?"
         "You blush":
             VOICE_IN_OFF "Hahaha. Look at that red face!"
             "You can barely stay calm while you are looking her."
 
     "..."
 
-    UNKNOW_PERSON "Why you stay there like a dumb?"
+    UNKNOW_PERSON "Why do you stay there like a dumb?"
 
     INNER_VOICE "..."
 
@@ -159,6 +178,53 @@ label search_for_dog:
 
             MARY "The pleasure is mine"
         "Hi...":
-            "To be continue"
+            show standby happy rsz at center
+            with dissolve
+    
+    INNER_VOICE "..."
+    INNER_VOICE "Damn! Her smile is so familiar to me but I can't remember"
+
+    MARY "What were you doing here?"
+
+    INNER_VOICE "Huh?"
+
+    show standby anger rsz
+    with dissolve
+
+    MARY "Yes - I'm talking to you!"
+
+    show standby happy rsz
+    with dissolve
+
+    MARY "What were you doing before we met?"
+
+    menu:
+        "I don't know. I just started walking to nowhere":
+            INNER_VOICE ""
+        "It's not of your business":
+            VOICE_IN_OFF "This part of the game remain incompletely..."
+
+            scene black
+            with dissolve
+
+            call incompletely_warning from _call_incompletely_warning_2
+
+
+    MARY "Well I think that I had been blessed with your presence after all."
+
+    call incompletely_warning from _call_incompletely_warning_3
 
     return
+
+label incompletely_warning:
+    VOICE_IN_OFF "This part of the game remain incompletely..."
+
+    scene black
+    with dissolve
+
+    VOICE_IN_OFF "On progress"
+
+    jump quit
+
+label quit:
+    show text "End of the Game"

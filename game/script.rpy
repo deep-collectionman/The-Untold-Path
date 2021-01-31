@@ -44,42 +44,34 @@ label start:
 
     show text "Welcome to The Untold Path"
     with dissolve
-    # with Pause(1)
     pause
 
     show text "Maybe you are asking to yourself what all is this about... or maybe not. But anyways let me tell you."
     with dissolve
-    # with Pause(1)
     pause
 
     show text "The explanation will be briefly."
     with dissolve
-    # with Pause(1)
     pause
 
     show text "This game is about the decisions that you make BY YOUR OWN CHOICE regarding the different events that have place in this story."
     with dissolve
-    # with Pause(1)
     pause
 
     show text "Have into account that you will be talking with people who you haven't seen in a long time."
     with dissolve
-    # with Pause(1)
     pause
 
     show text "And maybe the things that you do during the game will impact in the relationship that you have with the other people. You must to figure out how to reconnect your old feelings that you lost long time ago."
     with dissolve
-    # with Pause(1)
     pause
 
-    show text "You could ended up losing all your loved ones if you are careless."
+    show text "You could ended up losing your loved ones if you are careless"
     with dissolve
-    # with Pause(1)
     pause
 
     show text "Enjoy the game"
     with dissolve
-    # with Pause(1)
     pause
 
     stop music fadeout 2
@@ -90,13 +82,38 @@ label start:
 
     INNER_VOICE "Uhmm... What hour it's?"
 
-    VOICE_IN_OFF "Today is an important day. Pay attention"
+    play music "./audio/urban noise.mp3"
+
+    VOICE_IN_OFF "Today is an important day so pay attention please"
 
     INNER_VOICE "?"
     INNER_VOICE "What was that?"
 
+    INNER_VOICE "..."
+
+    scene bg room light rsz
+    with dissolve
+
+    INNER_VOICE "It looks pretty shiny out there."
+    INNER_VOICE "..."
+    INNER_VOICE "I feel really sleepy after had been working all the night and waking up in this way"
+
+    VOICE_IN_OFF "Do you really feel like that?"
+
+    INNER_VOICE "Huh?"
+    INNER_VOICE "..."
+    INNER_VOICE "Uhmm - What should I do today?"
+
     menu:
         "Go to the park":
+            INNER_VOICE "Ok - I think that I should spend some time out and see if there is something interesting to do."
+            INNER_VOICE "Maybe I could pass through the market and buy some things that I need"
+
+            VOICE_IN_OFF "You don't really need nothing today"
+
+            INNER_VOICE "..."
+            INNER_VOICE "I swear that I'm listening some weird voices there"
+
             call park_scene from _call_park_scene
         "Stay at home":
             call stay_at_home from _call_stay_at_home
@@ -105,7 +122,6 @@ label start:
     with fade
 
     show text "The End"
-    # with Pause(1)
     pause
 
     return

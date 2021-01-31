@@ -1,54 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 94, in script call
-    call search_for_dog
-  File "game/script.rpy", line 109, in script
-    "Well, It seems that I'm close to him..."
-  File "renpy/common/000window.rpy", line 114, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 69, in _window_show
-    renpy.with_statement(trans)
-IOError: Couldn't find file '[audio_path]ambience.ogg'.
+  File "game/park_scene.rpy", line 232, in script
+    python:
+  File "game/park_scene.rpy", line 233, in <module>
+    exit()
+NameError: name 'exit' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 94, in script call
-    call search_for_dog
-  File "game/script.rpy", line 109, in script
-    "Well, It seems that I'm close to him..."
-  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/ast.py", line 685, in execute
-    statement_name("say")
-  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/ast.py", line 46, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 114, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 69, in _window_show
-    renpy.with_statement(trans)
-  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/exports.py", line 1637, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/display/core.py", line 2545, in do_with
-    clear=clear)
-  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/display/core.py", line 3006, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/display/core.py", line 3699, in interact_core
-    renpy.audio.audio.periodic()
-  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/audio/audio.py", line 1101, in periodic
-    raise_(exc[0], exc[1], exc[2])
-  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/audio/audio.py", line 1079, in periodic_thread_main
-    periodic_pass()
-  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/audio/audio.py", line 1021, in periodic_pass
-    c.periodic()
-  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/audio/audio.py", line 487, in periodic
-    topf = load(self.file_prefix + filename + self.file_suffix)
-  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/audio/audio.py", line 69, in load
-    rv = renpy.loader.load(fn)
-  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/loader.py", line 798, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file '[audio_path]ambience.ogg'.
+  File "game/park_scene.rpy", line 232, in script
+    python:
+  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/ast.py", line 922, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/python.py", line 2218, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/park_scene.rpy", line 233, in <module>
+    exit()
+NameError: name 'exit' is not defined
 
 Linux-5.4.0-64-generic-i686-with-debian-buster-sid
 Ren'Py 7.4.1.1270
-The Untold Path 1.0
-Sat Jan 30 21:43:23 2021
+The Untold Path 0.5.1
+Sun Jan 31 17:11:59 2021
