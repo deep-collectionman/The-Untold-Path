@@ -23,7 +23,7 @@ init python:
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = u'#8a7d67'
+define gui.accent_color = u'#040404'
 
 ## The color used for a text button when it is neither selected nor hovered.
 define gui.idle_color = u'#888888'
@@ -107,7 +107,7 @@ define gui.textbox_height = 185
 
 ## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
 ## center, and 1.0 is the bottom.
-define gui.textbox_yalign = 1.0
+define gui.textbox_yalign = 0.5
 
 
 ## The placement of the speaking character's name, relative to the textbox.

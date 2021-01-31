@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 20: expected 'image_name_component' not found.
-    show scene black 
-        ^
+File "game/script.rpy", line 105: end of line expected.
+    with fade 1 
+              ^
 
 Ren'Py Version: Ren'Py 7.4.1.1270
-Sat Jan 30 18:40:30 2021
+Sat Jan 30 21:40:28 2021
