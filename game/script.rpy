@@ -21,6 +21,7 @@ define JOY_ALLOWED          = None
 define UNKNOW_PERSON = Character("?", color="#e5e5e5")
 define VOICE_IN_OFF = Character("...", color="#ffffff")
 define INNER_VOICE = Character("You", color="#2561a4")
+define MARY = Character("Mary", color="#23b182")
 
 # Effects
 
@@ -113,18 +114,74 @@ label better_things_to_do:
 
 
 label search_for_dog:
-    show find dog park
+    scene find dog park
     with fade 
 
-    "Where you want to start searching?"
+    "Where you want to start looking for?"
 
     menu:
         "Go to left":
-            "Mmmm... It seems that he is not here."
-        "Search between the tree":
+            INNER_VOICE "Mmmm... It seems that he is not here."
+            
+            "Suddenly you hear the voice of the girl who you were talking before"
+
+            UNKNOW_PERSON "It's here!!"
+
+            "You decide to follow her voice"
+        "Search between the trees":
             play sound "./audio/ambience.ogg"
             "Well, It seems that I'm close to him..." 
             "Hey buddy! Where are you?"
+
+            UNKNOW_PERSON "You found him!"
+
+            stop sound
+
+    show standby joy rsz at center
+    with dissolve
+    
+    UNKNOW_PERSON "Pepper! You're going to scare me to death if you keep running out of my sight"
+    UNKNOW_PERSON "But I'm so glad that we could find you."
+
+    show standby happy rsz at center
+    with dissolve
+
+    UNKNOW_PERSON "Don't make this again to me Pepper, please."
+    "..."
+    UNKNOW_PERSON "And thank you for helping me with this. I don't know what I will do if I lost him"
+
+    play sound "./audio/Well Done CCBY3.ogg" fadein 1
+
+    "There is a voice in your head"
+
+    VOICE_IN_OFF "It seems that you like it. Do you want to continue chatting with her?"
+    INNER_VOICE "..."
+
+    menu:
+        "Remain in silence":
+            INNER_VOICE "..."
+            INNER_VOICE "Uh, What? What where came that voice?"
+        "You blusshed":
+            VOICE_IN_OFF "Hahaha. Look at the red face!"
+            "You can barely stay "
+
+    "..."
+
+    UNKNOW_PERSON "Why you stay there like a dumb?"
+
+    INNER_VOICE "..."
+
+    show standby joy rsz at center
+    with dissolve
+
+    UNKNOW_PERSON "By the way, I didn't introduce myself."
+    UNKNOW_PERSON "My name is Mary"
+
+    menu:
+        "Nice to meet Mary":
+            $ RELEVANCE_VARIABLE = RELEVANCE_VARIABLE + 0.10
+        "Hi...":
+            "..."
 
     return
     
