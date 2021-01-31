@@ -1,6 +1,7 @@
 label stay_at_home:
     INNER_VOICE "I don't feel in the mood to go out."
-    INNER_VOICE "I think that I could stay in home. I could reading some books and then watch a movie."
+    INNER_VOICE "I think that I could stay in home. I could read some books and then watch a movie."
+    INNER_VOICE "..."
     INNER_VOICE "Yeah, that's fine"
 
     "You decide to stay at home for the rest of the day. Embraced by the silence of your room."
@@ -41,5 +42,9 @@ label stay_at_home:
     VOICE_IN_OFF "I told you. No, there is nothing that I can do to help you..."
     VOICE_IN_OFF "..."
     VOICE_IN_OFF "Just continue... with your monotonous life"
+
+    pause 2
+
+    "Your start feeling that you missed something relevant in your life"
 
     return

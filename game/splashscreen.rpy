@@ -1,7 +1,12 @@
 # This is the splashscreen shown at the beginning of the game
 
 label splashscreen:
+    scene presplash
+    with dissolve
+    with Pause(3)
+
     scene black
+    with dissolve
 
     show text "Global Game Jam 2021..."
     with dissolve
