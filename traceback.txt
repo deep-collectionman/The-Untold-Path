@@ -1,26 +1,42 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/park_scene.rpy", line 232, in script
-    python:
-  File "game/park_scene.rpy", line 233, in <module>
-    exit()
-NameError: name 'exit' is not defined
+  File "game/scripts/script.rpy", line 122, in script call
+    call park_scene from _call_park_scene
+  File "game/scripts/scenes/park_scene.rpy", line 64, in script call
+    call search_for_dog from _call_search_for_dog_1
+  File "game/scripts/scenes/park_scene.rpy", line 214, in script call
+    call incompletely_warning from _call_incompletely_warning_2
+  File "game/scripts/script.rpy", line 122, in script call
+    call park_scene from _call_park_scene
+  File "game/scripts/scenes/park_scene.rpy", line 64, in script call
+    call search_for_dog from _call_search_for_dog_1
+  File "game/scripts/scenes/park_scene.rpy", line 214, in script call
+    call incompletely_warning from _call_incompletely_warning_2
+ScriptError: could not find label 'incompletely_warning'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/park_scene.rpy", line 232, in script
-    python:
-  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/ast.py", line 922, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/python.py", line 2218, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/park_scene.rpy", line 233, in <module>
-    exit()
-NameError: name 'exit' is not defined
+  File "game/scripts/script.rpy", line 122, in script call
+    call park_scene from _call_park_scene
+  File "game/scripts/scenes/park_scene.rpy", line 64, in script call
+    call search_for_dog from _call_search_for_dog_1
+  File "game/scripts/scenes/park_scene.rpy", line 214, in script call
+    call incompletely_warning from _call_incompletely_warning_2
+  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/ast.py", line 1444, in execute
+    rv = renpy.game.context().call(label, return_site=self.next.name)
+  File "game/scripts/script.rpy", line 122, in script call
+    call park_scene from _call_park_scene
+  File "game/scripts/scenes/park_scene.rpy", line 64, in script call
+    call search_for_dog from _call_search_for_dog_1
+  File "game/scripts/scenes/park_scene.rpy", line 214, in script call
+    call incompletely_warning from _call_incompletely_warning_2
+  File "/home/collectionman/Descargas/renpy-7.4.1-sdk/renpy/script.py", line 900, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'incompletely_warning'.
 
-Linux-5.4.0-64-generic-i686-with-debian-buster-sid
+Linux-5.4.0-65-generic-i686-with-debian-buster-sid
 Ren'Py 7.4.1.1270
 The Untold Path 0.5.1
-Sun Jan 31 17:11:59 2021
+Thu Feb  4 21:52:19 2021

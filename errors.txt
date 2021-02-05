@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/park_scene.rpy", line 229: expected 'label_name_declare' not found.
-    label
-         ^
+File "game/scripts/scenes/park_scene.rpy", line 82: choice menuitem expects a non-empty block.
+    "Start walking around the park":
+                                    ^
 
 Ren'Py Version: Ren'Py 7.4.1.1270
-Sun Jan 31 17:09:18 2021
+Thu Feb  4 19:56:48 2021
